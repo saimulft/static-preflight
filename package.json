@@ -1,0 +1,71 @@
+{
+  "name": "static-preflight",
+  "version": "0.1.0",
+  "description": "Preflight checks for a static site build: SEO basics, broken links and assets, redirects, share cards, icons, JSON-LD and old-URL coverage.",
+  "keywords": [
+    "static-site",
+    "preflight",
+    "seo",
+    "link-checker",
+    "broken-links",
+    "open-graph",
+    "json-ld",
+    "redirects",
+    "nextjs",
+    "astro",
+    "eleventy",
+    "hugo",
+    "cli"
+  ],
+  "homepage": "https://github.com/saimulft/static-preflight#readme",
+  "bugs": {
+    "url": "https://github.com/saimulft/static-preflight/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saimulft/static-preflight.git"
+  },
+  "license": "MIT",
+  "author": "Saimul Islam (https://github.com/saimulft)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "static-preflight": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "lint": "eslint . && npm run lint:names",
+    "lint:names": "ls-lint",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --test",
+    "prepublishOnly": "npm run lint && npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@ls-lint/ls-lint": "^2.3.2",
+    "@types/node": "^20.19.43",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "prettier": "^3.10.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.73.0"
+  }
+}
