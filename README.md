@@ -1,10 +1,12 @@
 # static-preflight
 
-Preflight checks for a static site build, before you deploy it.
+A broken link checker and preflight for static site builds, before you deploy.
 
 [![npm version](https://img.shields.io/npm/v/static-preflight)](https://www.npmjs.com/package/static-preflight)
 [![license](https://img.shields.io/npm/l/static-preflight)](https://www.npmjs.com/package/static-preflight)
 [![node version](https://img.shields.io/node/v/static-preflight)](https://www.npmjs.com/package/static-preflight)
+
+Guide, examples and FAQ: https://oss.saimulislam.com/static-preflight/
 
 It started as the pre-launch check run on every static site [DeveloperLook](https://developerlook.com) ships.
 

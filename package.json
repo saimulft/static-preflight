@@ -1,23 +1,25 @@
 {
   "name": "static-preflight",
-  "version": "0.1.0",
-  "description": "Preflight checks for a static site build: SEO basics, broken links and assets, redirects, share cards, icons, JSON-LD and old-URL coverage.",
+  "version": "0.1.1",
+  "description": "Broken link checker and preflight for static site builds: links, assets, SEO basics, share cards, JSON-LD, redirects and old URLs.",
   "keywords": [
+    "broken link checker",
+    "internal link checker",
+    "find broken links",
+    "link-checker",
+    "website launch checklist",
+    "static site seo",
     "static-site",
     "preflight",
     "seo",
-    "link-checker",
-    "broken-links",
     "open-graph",
     "json-ld",
     "redirects",
     "nextjs",
     "astro",
-    "eleventy",
-    "hugo",
-    "cli"
+    "eleventy"
   ],
-  "homepage": "https://github.com/saimulft/static-preflight#readme",
+  "homepage": "https://oss.saimulislam.com/static-preflight/",
   "bugs": {
     "url": "https://github.com/saimulft/static-preflight/issues"
   },
