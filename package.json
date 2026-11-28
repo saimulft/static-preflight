@@ -1,6 +1,6 @@
 {
   "name": "static-preflight",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Broken link checker and preflight for static site builds: links, assets, SEO basics, share cards, JSON-LD, redirects and old URLs.",
   "keywords": [
     "broken link checker",

@@ -1,16 +1,45 @@
-# static-preflight
+<h1 align="center">static-preflight</h1>
 
-A broken link checker and preflight for static site builds, before you deploy.
+<p align="center">
+  A broken link checker and preflight for static site builds, before you deploy.
+</p>
 
-[![npm version](https://img.shields.io/npm/v/static-preflight)](https://www.npmjs.com/package/static-preflight)
-[![license](https://img.shields.io/npm/l/static-preflight)](https://www.npmjs.com/package/static-preflight)
-[![node version](https://img.shields.io/node/v/static-preflight)](https://www.npmjs.com/package/static-preflight)
+<p align="center">
+  <a href="https://www.npmjs.com/package/static-preflight"><img alt="npm version" src="https://img.shields.io/npm/v/static-preflight" /></a>
+  <a href="https://www.npmjs.com/package/static-preflight"><img alt="license" src="https://img.shields.io/npm/l/static-preflight" /></a>
+  <a href="https://www.npmjs.com/package/static-preflight"><img alt="node version" src="https://img.shields.io/node/v/static-preflight" /></a>
+</p>
 
-Guide, examples and FAQ: https://oss.saimulislam.com/static-preflight/
+<p align="center">
+  <a href="https://oss.saimulislam.com/static-preflight/">Guide, examples and FAQ</a> ·
+  <a href="https://www.npmjs.com/package/static-preflight">npm</a> ·
+  <a href="https://github.com/saimulft/static-preflight">GitHub</a> ·
+  <a href="https://github.com/saimulft/static-preflight/blob/main/CHANGELOG.md">Changelog</a>
+</p>
+
+<p align="center">
+  <a href="https://oss.saimulislam.com/static-preflight/">
+  <img alt="A build folder checked by static-preflight: two pages pass, the menu, contact and product pages, the stylesheet and the old URL list each carry problem chips such as alt, broken link, noindex, share-card and Product JSON-LD, and the build stops with exit 1" src="https://oss.saimulislam.com/shots/static-preflight/build.webp" width="880" />
+  </a>
+</p>
+
+<p align="center">
+  <b>What it checks, file by file.</b> A five-page bakery site checked with the real CLI. Every chip is a line of its output, and the exit code stops the deploy.
+</p>
 
 It started as the pre-launch check run on every static site [DeveloperLook](https://developerlook.com) ships.
 
 static-preflight reads the HTML your build wrote (Next.js with `output: 'export'`, Astro, Eleventy, Hugo, or anything else that writes HTML files) and fails the build when a launch would go wrong: a page without a title or description, a broken internal link or image, a share card pointing at a missing file, an old URL that no longer lands anywhere. Link checkers such as linkinator look at links only, and html-validate looks at markup; neither knows about SEO basics, share cards, icons, JSON-LD or `_redirects`. This one does, in a single zero-dependency pass over a folder.
+
+## See it work
+
+### The same run in a terminal
+
+Problems are grouped by check, and the last line says how many pages and old URLs were checked.
+
+<img alt="static-preflight in a terminal listing 15 problems grouped by check, from description and alt to share-card, jsonld, redirects and legacy-urls" src="https://oss.saimulislam.com/shots/static-preflight/check.webp" width="880" />
+
+More examples and the FAQ are on the [guide](https://oss.saimulislam.com/static-preflight/).
 
 ## Install
 
